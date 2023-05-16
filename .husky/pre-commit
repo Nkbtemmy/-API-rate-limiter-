@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-yarn format:check
-yarn format
-yarn lint:fix
-yarn build
+npm run format:check
+npm run format
+npm run lint:fix
+npm run build
