@@ -16,6 +16,10 @@ RUN npm install -g pm2
 # Copy application code
 COPY . .
 
+# Environmental variables
+ENV HOST=https://api-rate-limiter-0pqt.onrender.com
+ENV NODE_ENV=production
+
 # Expose a port (optional, depending on your application)
 EXPOSE 9099
 
