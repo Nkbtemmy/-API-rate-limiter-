@@ -1,0 +1,21 @@
+version: '3'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: prod
+    volumes:
+      - app-data:/app
+    restart: always
+    env_file:
+      - .env
+    environment:
+      NODE_ENV: production
+    expose:
+      - 8005
+    ports:
+      - '8005:8005'
+    command: npm run start
+volumes:
+  app-data:
