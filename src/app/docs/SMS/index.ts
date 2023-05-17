@@ -15,7 +15,7 @@ const sms = {
           schema: {
             example: {
               phoneNumber: "250783256940",
-              message: "A text message sent using the telesignal SMS API"
+              message: "A text message sent using the telesignal SMS API",
             },
           },
         },
@@ -38,7 +38,7 @@ const sms = {
           schema: {
             example: {
               phoneNumber: "250787311654",
-              message: "A text message sent using the Vonage SMS API"
+              message: "A text message sent using the Vonage SMS API",
             },
           },
         },
@@ -47,7 +47,6 @@ const sms = {
       responses,
     },
   },
-
 };
 
 export default sms;

@@ -1,5 +1,5 @@
-import nodemailer from 'nodemailer';
-import dotenv from 'dotenv';
+import nodemailer from "nodemailer";
+import dotenv from "dotenv";
 // import Response from './../helpers/Response';
 // import { ServerResponse } from 'http';
 
@@ -27,7 +27,7 @@ const sendEmail = (mailOptions: {
     subject: mailOptions.subject,
     html: mailOptions.message,
   };
-  return transporter.sendMail(Options, error => {
+  return transporter.sendMail(Options, (error) => {
     if (error) {
       // return Response.error(res:ServerResponse,402,{
       //   message:"email failed to be sent",
