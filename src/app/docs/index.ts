@@ -1,12 +1,15 @@
 import dotenv from "dotenv";
 import os from "os";
 import swaggerDoc from "./swagger.json";
+import sms from "./SMS";
+
 const defaults = swaggerDoc.paths;
 
 dotenv.config();
 
 const paths = {
   ...defaults,
+  ...sms,
 };
 
 const config = {
