@@ -3,7 +3,7 @@ services:
   app:
     build:
       context: .
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile.prod
       target: prod
     volumes:
       - app-data:/app
@@ -17,5 +17,7 @@ services:
     ports:
       - '8005:8005'
     command: npm run start
+  redis:
+    image: redis:alpine
 volumes:
   app-data:

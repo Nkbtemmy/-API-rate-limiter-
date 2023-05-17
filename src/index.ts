@@ -3,6 +3,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import rateLimit from "express-rate-limit";
 import apicache from "apicache";
+import morgan from "morgan";
 import router from "./app/routers";
 
 dotenv.config();
@@ -23,6 +24,7 @@ app.use(cache("1 minutes"));
 app.use(express.json());
 app.use(cors());
 app.use(router);
+app.use(morgan("dev"));
 
 app.listen({ port: PORT }, () =>
   process.stdout.write(`http://localhost:${PORT} \n`)

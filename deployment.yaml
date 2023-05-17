@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: app
+  template:
+    metadata:
+      labels:
+        app: app
+    spec:
+      containers:
+        - name: app
+          image: Dockerfile.prod:imanzi
+          ports:
+            - containerPort: 8005
+          env:
+            - name: NODE_ENV
+              value: production
+          command: ["pm2-runtime", "start", "npm", "--", "start", "-i", "max"]
