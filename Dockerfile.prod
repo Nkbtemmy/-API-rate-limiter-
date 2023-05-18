@@ -3,8 +3,6 @@ FROM node:lts-alpine AS base
 WORKDIR /app
 COPY package.json ./
 RUN npm install
-# Install pm2 globally
-RUN npm install -g pm2
 
 # Development image
 FROM base AS dev
@@ -14,9 +12,9 @@ CMD ["npm", "run", "dev"]
 
 # Production image
 FROM base AS prod
-# Build TypeScript code
-RUN npm run build
+RUN npm install -g pm2
+COPY . .
 ENV NODE_ENV=production
+RUN npm run build
 # ENV HOST=app:8005
-COPY src .
 CMD ["pm2-runtime", "start", "npm", "--", "start", "-i", "max"]

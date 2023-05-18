@@ -8,6 +8,8 @@ services:
     volumes:
       - app-data:/app
     restart: always
+    depends_on:
+      - redis
     env_file:
       - .env
     environment:
@@ -15,7 +17,7 @@ services:
     expose:
       - 8005
     ports:
-      - '8000-8002:8005'
+      - '8007-8009:8005'
     command: pm2-runtime start npm -- start -i max
     deploy:
       replicas: 3

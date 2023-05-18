@@ -105,5 +105,8 @@ I'm a full stack developer who is currently working in the software engineering 
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![Three clusters Running](https://res.cloudinary.com/http-voicetoworld-netlify-app/image/upload/v1684403681/Screenshot_2023-05-18_113330_ksqyeo.png)
+
+![Docker-compose ps](https://res.cloudinary.com/http-voicetoworld-netlify-app/image/upload/v1684403681/Screenshot_2023-05-18_113330_ksqyeo.png)
+
 
