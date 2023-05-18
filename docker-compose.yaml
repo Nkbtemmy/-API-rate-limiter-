@@ -16,7 +16,7 @@ services:
       - 8005
     ports:
       - '8000-8002:8005'
-    command: npm run start
+    command: pm2-runtime start npm -- start -i max
     deploy:
       replicas: 3
       placement:

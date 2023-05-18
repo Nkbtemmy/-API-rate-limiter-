@@ -37,7 +37,7 @@
     "dev": "nodemon",
     "clean": "rimraf ./build",
     "build": "npm run clean && tsc",
-    "start": "tsc && node build/index",
+    "start": "node build/index",
     "local": "ts-node src",
     "lint": "eslint src",
     "lint:fix": "npm run lint -- --fix",
