@@ -15,8 +15,20 @@ services:
     expose:
       - 8005
     ports:
-      - '8005:8005'
+      - '8000-8002:8005'
     command: npm run start
+    deploy:
+      replicas: 3
+      placement:
+        max_replicas_per_node: 2
+        constraints: [node.role != manager]
+      update_config:
+        parallelism: 2
+        delay: 3s
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
   redis:
     image: redis:alpine
 volumes:
