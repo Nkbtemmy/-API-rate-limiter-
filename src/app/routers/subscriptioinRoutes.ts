@@ -6,8 +6,8 @@ const router = express();
 
 router.post("/", SubscriptionControllers.create);
 router.get("/", SubscriptionControllers.getAll);
-router.post("/:id", SubscriptionControllers.getOne);
-router.post("/:id", protectedRoute, SubscriptionControllers.update);
-router.post("/:id", protectedRoute, SubscriptionControllers.delete);
+router.get("/:id", SubscriptionControllers.getOne);
+router.put("/:id", protectedRoute, SubscriptionControllers.update);
+router.delete("/:id", protectedRoute, SubscriptionControllers.delete);
 
 export default router;

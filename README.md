@@ -9,6 +9,25 @@ API rate limiter that tracks and enforces limits on requests made by individual 
 Add badges from somewhere like: [shields.io](https://shields.io/)
 [![Build](https://github.com/Nkbtemmy/-API-rate-limiter-/actions/workflows/build.ci.yaml/badge.svg)](https://github.com/Nkbtemmy/-API-rate-limiter-/actions/workflows/build.ci.yaml)
 
+## Technologies used
+
+- Docker
+- Docker compose
+- Nodejs
+- MongoDB
+
+## Run Deployment 
+
+start server
+
+```bash
+  RUN docker-compose up --build
+```
+Test it locally
+```bash
+  Navigate to localhost:8007/api-docs
+```
+
 
 ## Tech Stack
 
@@ -45,12 +64,28 @@ Install dependencies
   yarn install
 ```
 
+Provide environment variables
+
+- For Windows
+```bash
+  copy  .env.example .env
+```
+
+- For Lunix
+```bash
+  cp .env.example .env
+```
+
 Start the server
 
 ```bash
   yarn dev
 ```
+Test the Endpoint
 
+```bash
+  navigate to {host}:{PORT}/api-docs and start by creating subscription and copy its ID
+```
 
 ## Environment Variables
 
@@ -71,6 +106,16 @@ To run this project, you will need to add the following environment variables to
 `VONAGE_API_SECRET`
 
 `VONAGE_BRAND_NAME`
+
+`JWT_SECRET`
+
+`DB_CONNECT`
+
+`SERVICE_USERNAME`
+
+`SERVICE_PASSWORD`
+
+`TRANSPORTER_SERVICE`
 
 
 ## Deployment
@@ -108,5 +153,7 @@ I'm a full stack developer who is currently working in the software engineering 
 ![Three clusters Running](https://res.cloudinary.com/http-voicetoworld-netlify-app/image/upload/v1684403681/Screenshot_2023-05-18_113330_ksqyeo.png)
 
 ![Docker-compose ps](https://res.cloudinary.com/http-voicetoworld-netlify-app/image/upload/v1684403681/Screenshot_2023-05-18_113330_ksqyeo.png)
+
+![Swwagger Documentation](https://res.cloudinary.com/http-voicetoworld-netlify-app/image/upload/v1684507154/Screenshot_2023-05-19_163728_rxrfaa.png)
 
 

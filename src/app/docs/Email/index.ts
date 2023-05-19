@@ -16,7 +16,8 @@ const email = {
             example: {
               to: "admin@irembo.com",
               subject: "Greetings from Mr NKUBITO",
-              message: "Hello there; Hope you day is going well and i wish you to keep that vibes",
+              message:
+                "Hello there; Hope you day is going well and i wish you to keep that vibes",
             },
           },
         },

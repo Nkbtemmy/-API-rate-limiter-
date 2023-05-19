@@ -4,6 +4,8 @@ import dotenv from "dotenv";
 import morgan from "morgan";
 import router from "./app/routers";
 import { isAuth } from "./app/middlewares/protected";
+// import manyRequestsFromSameWindowLimiter from "./app/middlewares/manyRequestsFromSameWindowLimiter";
+// import globalRateLimiter from "./app/middlewares/globalRateLimiter";
 
 dotenv.config();
 const app = express();
