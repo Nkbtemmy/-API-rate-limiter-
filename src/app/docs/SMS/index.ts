@@ -3,7 +3,7 @@ import responses from "../responses";
 const sms = {
   "/sms/telesignal": {
     post: {
-      tags: ["SMS telesignal"],
+      tags: ["SMS"],
       summary: "Send new sms",
       description: "Send new sms.",
       security: [{ JWT: [] }],
@@ -26,7 +26,7 @@ const sms = {
   },
   "/sms/venage": {
     post: {
-      tags: ["SMS venage"],
+      tags: ["SMS"],
       summary: "Send new sms",
       description: "Send new sms.",
       security: [{ JWT: [] }],
