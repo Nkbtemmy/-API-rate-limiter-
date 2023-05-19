@@ -5,6 +5,11 @@ import checkUserLimits from "../middlewares/rateLimitRoutes";
 
 const router = express();
 
-router.post("/send", protectedRoute, checkUserLimits, EmailController.sendEmail);
+router.post(
+  "/send",
+  protectedRoute,
+  checkUserLimits,
+  EmailController.sendEmail
+);
 
 export default router;

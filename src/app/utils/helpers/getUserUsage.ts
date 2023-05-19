@@ -1,5 +1,5 @@
 // Assuming you have a data storage mechanism such as a database
-import Usage from '../../database/models/usageSchema';
+import Usage from "../../database/models/usageSchema";
 
 // Function to retrieve the current usage of the user
 const getUserUsage = async (userId) => {
@@ -24,7 +24,7 @@ const getUserUsage = async (userId) => {
     };
   } catch (error) {
     // Handle error
-    throw new Error('Failed to retrieve user usage');
+    throw new Error("Failed to retrieve user usage");
   }
 };
 

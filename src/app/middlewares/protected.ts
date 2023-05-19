@@ -28,7 +28,7 @@ export const isAuth = (req, _, next) => {
     return next();
   }
   req.isAuth = true;
-  decodedToken = decodedToken._doc
+  decodedToken = decodedToken._doc;
   req.userId = decodedToken._id;
   return next();
 };
@@ -50,7 +50,7 @@ export const protectedRoute = async (req, res, next) => {
   } catch (err) {
     return Response.error(res, 401, {
       message: "invalid token,login to get one",
-      error:err.message
+      error: err.message,
     });
   }
 };

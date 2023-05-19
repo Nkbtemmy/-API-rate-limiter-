@@ -5,7 +5,12 @@ import checkUserLimits from "../middlewares/rateLimitRoutes";
 
 const router = express();
 
-router.post("/telesignal", protectedRoute, checkUserLimits, Smscontrollers.telesignal);
+router.post(
+  "/telesignal",
+  protectedRoute,
+  checkUserLimits,
+  Smscontrollers.telesignal
+);
 router.post("/venage", protectedRoute, checkUserLimits, Smscontrollers.venage);
 
 export default router;

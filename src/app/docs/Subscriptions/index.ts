@@ -14,12 +14,12 @@ const subscriptions = {
           required: true,
           schema: {
             example: {
-                name: "freemium",
-                limits: {
-                    daily: 100,
-                    monthly: 3000,
-                    system: 10000,
-                },
+              name: "freemium",
+              limits: {
+                daily: 100,
+                monthly: 3000,
+                system: 10000,
+              },
             },
           },
         },
@@ -28,13 +28,13 @@ const subscriptions = {
       responses,
     },
     get: {
-        tags: ["Subscription"],
-        summary: "Get all Subscriptions",
-        description: "Get all Subscriptions.",
-        security: [{ JWT: [] }],
-        parameters: [],
-        consumes: ["application/json"],
-        responses,
+      tags: ["Subscription"],
+      summary: "Get all Subscriptions",
+      description: "Get all Subscriptions.",
+      security: [{ JWT: [] }],
+      parameters: [],
+      consumes: ["application/json"],
+      responses,
     },
   },
 };

@@ -15,7 +15,8 @@ const email = {
           schema: {
             example: {
               to: "admin@irembo.com",
-              message: "Greetings from Mr NKUBITO",
+              subject: "Greetings from Mr NKUBITO",
+              message: "Hello there; Hope you day is going well and i wish you to keep that vibes",
             },
           },
         },

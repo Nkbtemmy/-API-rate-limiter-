@@ -14,9 +14,9 @@ const user = {
           required: true,
           schema: {
             example: {
-                email: "admin@example.org",
-                password:"password123!",
-                subscriptionId: "646649b83c8cd2bb2e86b1b2"
+              email: "admin@example.org",
+              password: "password123!",
+              subscriptionId: "646649b83c8cd2bb2e86b1b2",
             },
           },
         },
@@ -25,13 +25,13 @@ const user = {
       responses,
     },
     get: {
-        tags: ["User"],
-        summary: "Get all user",
-        description: "Get all user.",
-        security: [{ JWT: [] }],
-        parameters: [],
-        consumes: ["application/json"],
-        responses,
+      tags: ["User"],
+      summary: "Get all user",
+      description: "Get all user.",
+      security: [{ JWT: [] }],
+      parameters: [],
+      consumes: ["application/json"],
+      responses,
     },
   },
   "/users/login": {
@@ -47,8 +47,8 @@ const user = {
           required: true,
           schema: {
             example: {
-                email: "admin@example.org",
-                password:"Password123!"
+              email: "admin@example.org",
+              password: "Password123!",
             },
           },
         },
